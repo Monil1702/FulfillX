@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.idea/
+.vscode/
+node_modules/
+dist/
+target/
+test-results/
+playwright-report/
+*.log
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
