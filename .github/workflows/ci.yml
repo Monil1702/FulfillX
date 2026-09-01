@@ -40,4 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: docker compose config --quiet
+      - name: Validate Docker Compose
+        run: |
+          POSTGRES_PASSWORD="$(openssl rand -hex 24)" \
+          RABBITMQ_PASSWORD="$(openssl rand -hex 24)" \
+          docker compose config --quiet
